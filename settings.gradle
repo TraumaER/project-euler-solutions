@@ -8,3 +8,5 @@
  */
 
 rootProject.name = 'project-euler'
+
+include 'problem_0001'

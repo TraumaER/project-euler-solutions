@@ -10,3 +10,4 @@
 rootProject.name = 'project-euler'
 
 include 'problem_0001'
+include 'problem_0002'

@@ -16,7 +16,6 @@ class SolutionTest extends Specification {
         5   | [3]
         20  | [3, 5, 6, 9, 10, 12, 15, 18]
         21  | [3, 5, 6, 9, 10, 12, 15, 18, 20]
-
     }
 
     @Unroll

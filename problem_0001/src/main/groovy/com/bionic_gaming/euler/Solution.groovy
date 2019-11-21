@@ -4,11 +4,23 @@ import groovy.transform.CompileStatic
 
 @CompileStatic
 class Solution {
-    List<Integer> getMultiples(Integer max) {
-        return [3, 5, 6, 9]
+    /**
+     * Returns all the multiples of 3 and 5 below given maximum
+     * @param max {@link Integer}
+     * @return {@link List}
+     */
+    static List<Integer> getMultiples(Integer max) {
+        List<Integer> resp = new ArrayList<>()
+
+        for(def i = 1; i < max; i++) {
+            if(i % 3 == 0 || i % 5 == 0)
+                resp.add(i)
+        }
+
+        return resp
     }
 
-    Integer sumAllMultiples() {
+    static Integer sumAllMultiples() {
         return getMultiples(10).stream().reduce(0, {Integer a, Integer b -> a + b })
     }
 }

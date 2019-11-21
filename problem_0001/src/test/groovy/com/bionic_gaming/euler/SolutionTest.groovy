@@ -27,9 +27,16 @@ class SolutionTest extends Specification {
         response == expected
         where:
         max | expected
-        10 | 23
-        5 | 3
-        20 | 78
-        21 | 98
+        10  | 23
+        5   | 3
+        20  | 78
+        21  | 98
+    }
+
+    def "sumAllMutliples for 1000"() {
+        when:
+        println Solution.sumAllMultiples(1000)
+        then:
+        true
     }
 }

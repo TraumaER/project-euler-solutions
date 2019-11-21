@@ -20,7 +20,9 @@ class Solution {
         return resp
     }
 
-    static Integer sumAllMultiples() {
-        return getMultiples(10).stream().reduce(0, {Integer a, Integer b -> a + b })
+    static Integer sumAllMultiples(Integer max) {
+        return getMultiples(max)
+                .stream()
+                .reduce(0, {Integer a, Integer b -> a + b })
     }
 }

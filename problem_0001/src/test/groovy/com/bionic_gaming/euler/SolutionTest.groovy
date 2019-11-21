@@ -19,10 +19,17 @@ class SolutionTest extends Specification {
 
     }
 
-    def "sumAllMultiples returns the correct sum"() {
+    @Unroll
+    def "sumAllMultiples returns the correct sum for #max"() {
         when:
-        def response = Solution.sumAllMultiples()
+        def response = Solution.sumAllMultiples(max)
         then:
-        response == 23
+        response == expected
+        where:
+        max | expected
+        10 | 23
+        5 | 3
+        20 | 78
+        21 | 98
     }
 }
